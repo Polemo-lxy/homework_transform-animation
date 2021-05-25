@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>css3过渡</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<style>
+.demo{width:360px; margin:60px auto 10px auto}
+@media only screen and (min-width: 420px) {
+	.demo{width:800px; margin:60px auto 10px auto}
+}
+.box{float:left; width:380px; height:260px}
+.clear{clear:both}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*第一个效果*/
+.he_border1:hover>.he_border1_img{
+	transition: all .4s;
+	transform: scale(1.2,1.2);
+}
+
+.he_border1_caption_a:hover{
+	transition: all .4s;
+	background: #fe7253;
+	opacity: 0.3;
+}
+.he_border1:hover>.he_border1_caption> .he_border1_caption_p{
+	transition: all .4s;
+	top: 45%;
+	opacity: 1;
+}
+.he_border1:hover>.he_border1_caption::before {
+	top: 8%;
+	right: 10%;
+	bottom: 8%;
+	left: 10%;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	opacity:1;
+	transition: all .4s;
+}
+
+.he_border1:hover>.he_border1_caption::after {
+	top: 8%;
+	right: 10%;
+	bottom: 8%;
+	left: 10%;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	-o-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+	opacity:1;
+	transition: all .4s;
+}
+
+/*第二个效果*/
+.he_border2:hover>.he_border2_img{
+	transition: all .4s;
+	transform: scale(1.2,1.2);
+}
+
+.he_border2_caption_a:hover{
+	transition: all .4s;
+	background: #fe7253;
+	opacity: 0.3;
+}
+.he_border2:hover>.he_border2_caption> .he_border2_caption_p{
+	transition: all .4s;
+	top: 45%;
+	opacity: 1;
+}
+.he_border2:hover .he_border2_caption::before {
+	top: 14%;
+	right: 5%;
+	bottom: 14%;
+	left: 5%;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	transform-origin: 0 0;
+	opacity:1;
+	transition: all .4s;
+}
+
+.he_border2:hover .he_border2_caption::after {
+	top: 8%;
+	right: 10%;
+	bottom: 8%;
+	left: 10%;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	-o-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+	opacity:1;
+	transition: all .4s;
+}
+/*第三个效果*/
+@keyframes animation_3_1{
+	0%{
+		opacity: 1;
+		transform: rotateX(0deg);
+	}
+	45%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+		transform: rotateX(90deg);
+	}
+	100%{
+		opacity: 0;
+		transform: rotateX(180deg);
+	}
+}
+.he_3DFlipX:hover .he_3DFlipX_img{
+	animation:animation_3_1 .8s;
+	opacity: 0;
+	transform: rotateX(180deg);
+}
+@keyframes animation_3_2{
+	0%{
+		opacity: 0;
+		transform: rotateX(-180deg);
+	}
+	50%{
+		opacity: 1;
+		transform: rotateX(-90deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateX(0deg);
+	}
+}
+.he_3DFlipX:hover .he_3DFlipX_caption{
+	animation:animation_3_2 .8s;
+	opacity: 1;
+	transform: rotateX(0deg);
+}
+
+
+/*第四个效果*/
+@keyframes animation_4_1{
+	0%{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+	45%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+		transform: rotateY(90deg);
+	}
+	100%{
+		opacity: 0;
+		transform: rotateY(180deg);
+	}
+}
+.he_3DFlipY:hover .he_3DFlipY_img{
+	animation:animation_4_1 .8s;
+	opacity: 0;
+	transform: rotateY(180deg);
+}
+@keyframes animation_4_2{
+	0%{
+		opacity: 0;
+		transform: rotateY(-180deg);
+	}
+	50%{
+		opacity: 1;
+		transform: rotateY(-90deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+}
+.he_3DFlipY:hover .he_3DFlipY_caption{
+	animation:animation_4_2 .8s;
+	opacity: 1;
+	transform: rotateY(0deg);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="demo">
+
+	<div class="box">
+		<div class="he_border1">
+			<img class="he_border1_img" src="images/pro_1.jpg" alt="Image 01">
+			<div class="he_border1_caption">
+				<h3 class="he_border1_caption_h">过渡</h3>
+				<p class="he_border1_caption_p">过渡效果+演示+源码</p>
+				<a class="he_border1_caption_a" href="#"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="he_border2">
+			<img class="he_border2_img" src="images/pro_2.jpg" alt="Image 01">
+			<div class="he_border2_caption">
+				<h3 class="he_border2_caption_h">过渡</h3>
+				<p class="he_border2_caption_p">过渡效果+演示+源码</p>
+				<a class="he_border2_caption_a" href="#"></a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="he_3DFlipX">
+			<div class="he_3DFlipX_inner">
+				<div class="he_3DFlipX_img">
+					<img src="images/pro_3.jpg" alt="img01">
+				</div>
+				<div class="he_3DFlipX_caption">
+					<h3>过渡</h3>
+					<p>过渡效果+演示+源码</p>
+				</div>
+				<a href="#"></a>
+			 </div>
+		</div>
+	</div>
+	
+	<div class="box">
+		<div class="he_3DFlipY">
+			<div class="he_3DFlipY_inner">
+				<div class="he_3DFlipY_img">
+					<img src="images/pro_1.jpg" alt="img01">
+				</div>
+				<div class="he_3DFlipY_caption">
+					<h3>过渡</h3>
+					<p>过渡效果+演示+源码</p>
+				</div>
+				<a href="#"></a>
+			 </div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+</div>
+
+
+</body>
+</html>
